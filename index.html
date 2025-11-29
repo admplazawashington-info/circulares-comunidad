@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Gastos Comunes - Noviembre 2025</title>
+    <!-- Carga de Tailwind CSS para estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilo general del cuerpo y contenedor */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            padding: 1rem;
+        }
+        .infographic-container {
+            /* Max-width ideal para simular un documento y asegurar buena legibilidad en desktop */
+            max-width: 800px; 
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 2rem 1.5rem; /* Ajuste de padding para móviles */
+            color: #1f2937;
+        }
+
+        /* Colores Comunitarios ajustados al ejemplo */
+        .color-primary { background-color: #10b981; } /* Esmeralda/Verde */
+        .color-secondary { background-color: #3b82f6; } /* Azul */
+        .color-repair { background-color: #ef4444; } /* Rojo/Peligro */
+        .text-primary { color: #10b981; }
+        .text-secondary { color: #3b82f6; }
+        .bg-card { background-color: #f9fafb; }
+        
+        /* Estilo para el indicador de variación general */
+        .variation-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 640px) {
+            .infographic-container {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+
+        <!-- HEADER PRINCIPAL -->
+        <header class="text-center mb-10 border-b-4 border-primary pb-4">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800">TU COMUNIDAD EN CIFRAS</h1>
+            <p class="xl sm:text-2xl font-bold text-primary mt-1">NOVIEMBRE 2025 vs. OCTUBRE 2025</p>
+            <p class="text-sm text-gray-500">Comunidad Edificio Plaza Washington</p>
+        </header>
+
+        <!-- DATOS PROCESADOS -->
+        <!-- Noviembre Total: $14.824.498 -->
+        <!-- Octubre Total: $14.365.232 -->
+        <!-- Variación Total: +$459.266 -->
+
+        <!-- SECCIÓN 1: CIFRAS GLOBALES -->
+        <section class="mb-10 p-4 sm:p-5 bg-card rounded-xl shadow-inner">
+            <!-- Título modificado: "Panorama General de Gastos" -> "Panorama General" -->
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-secondary border-b pb-2">Panorama General</h2>
+            <div class="flex flex-col sm:flex-row justify-around items-center text-center space-y-4 sm:space-y-0">
+                <div class="w-full sm:w-1/3">
+                    <p class="text-lg font-semibold text-gray-500">Octubre 2025</p>
+                    <!-- Octubre es el mes cerrado, lo dejamos sin símbolo -->
+                    <p class="text-3xl font-extrabold text-gray-800">$14.365.232</p>
+                </div>
+                <div class="w-full sm:w-1/3">
+                    <p class="text-lg font-semibold text-gray-500">Noviembre 2025</p>
+                    <!-- Se quitó (Estimado) y se mantiene el símbolo de "aproximadamente" -->
+                    <p class="text-3xl font-extrabold text-gray-800">~$14.824.498</p>
+                </div>
+                <!-- INDICADOR DE VARIACIÓN -->
+                <div class="w-full sm:w-1/3 pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-l border-gray-200">
+                    <p class="text-lg font-semibold text-gray-500">Variación Total</p>
+                    <!-- Se agrega el símbolo de "aproximadamente" -->
+                    <div class="variation-badge bg-red-500 text-white shadow-md">
+                         <!-- Icono de aumento (lucide-react, simulado con SVG para HTML single file) -->
+                         <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        ~+$459.266
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-sm mt-3 text-red-600 italic font-semibold">El aumento representa un 3.2% del gasto total (cifra aproximada).</p>
+        </section>
+
+        <!-- SECCIÓN 2: CAUSAS DEL AUMENTO Y AHORRO (GRÁFICO DE BARRAS SIMPLE) -->
+        <section class="mb-10">
+            <!-- Título modificado: "¿Qué Explica la Variación? (Nov vs Oct)" -> "¿Qué Explica la Variación?" -->
+            <h2 class="text-xl sm:text-2xl font-bold mb-5 text-primary">¿Qué Explica la Variación?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- CAUSA 1: REPARACIONES (AUMENTO MÁXIMO) -->
+                <!-- Nov: $1.409.084 | Oct: $802.342 | Diff: +$606.742 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border-t-4 border-red-500 hover:shadow-xl transition duration-300">
+                    <p class="font-bold text-xl text-red-600 mb-2">🚨 Mayor Aumento: Reparaciones</p>
+                    <!-- Monto corregido a la primera cuota del hidroneumático, según la solicitud -->
+                    <p class="text-2xl font-extrabold text-red-500">~+$525.583</p>
+                    <p class="text-sm text-gray-500">Monto de la principal inversión de Noviembre.</p>
+                    <div class="mt-3 text-sm">
+                        <!-- Se cambia "Inversión total del trabajo" por "Costo total del trabajo" y se eliminan los asteriscos/fecha de ejecución -->
+                        <span class="font-semibold">Principal Inversión:</span> Pago de la primera cuota del nuevo hidroneumático. Costo total del trabajo: ~$3.153.498.
+                    </div>
+                </div>
+
+                <!-- CAUSA 2: SEGUROS (NUEVO COSTO) -->
+                <!-- Nov: $574.832 | Oct: $0 | Diff: +$574.832 (Costo que no existía en Oct) -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition duration-300">
+                    <p class="font-bold text-xl text-blue-600 mb-2">🛡️ Nuevo Cargo: Seguros</p>
+                    <!-- Se agrega el símbolo de "aproximadamente" -->
+                    <p class="text-2xl font-extrabold text-blue-500">~+$574.832</p>
+                    <p class="text-sm text-gray-500">Cuota 1/12 de la Póliza N° 1322500020971.</p>
+                    <div class="mt-3 text-sm">
+                        <!-- Se eliminan los asteriscos de formato -->
+                        <span class="font-semibold">Renovación Póliza:</span> Se renovó la póliza logrando un ahorro significativo de ~2UF respecto al costo anterior, beneficiando a la comunidad a largo plazo.
+                    </div>
+                </div>
+
+                <!-- CAUSA 3: USO O CONSUMO (AHORRO) -->
+                <!-- Nov: $4.351.474 | Oct: $5.040.143 | Diff: -$688.669 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg border-t-4 border-green-500 hover:shadow-xl transition duration-300">
+                    <p class="font-bold text-xl text-green-600 mb-2">✅ Mayor Disminución: Uso/Consumo</p>
+                    <!-- Se agrega el símbolo de "aproximadamente" -->
+                    <p class="text-2xl font-extrabold text-green-500">~-$688.669</p>
+                    <p class="text-sm text-gray-500">Ahorro respecto a octubre.</p>
+                    <div class="mt-3 text-sm">
+                        <!-- Se eliminan los asteriscos de formato -->
+                        <span class="font-semibold">Consumo Menor:</span> Este ahorro se debe principalmente a un menor consumo de Gas para el Boiler y Electricidad, resultado de la finalización de la temporada de invierno.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: DETALLE DE REPARACIONES CLAVE (El Gasto Fuerte) -->
+        <section class="mb-10">
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-red-600">Detalle de Inversiones y Reparaciones (Noviembre)</h2>
+            <div class="space-y-4">
+
+                <!-- ITEM 1: HIDRONEUMÁTICO -->
+                <div class="p-4 bg-red-50 border border-red-200 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
+                    <div class="flex-shrink-0 mr-4 mb-2 sm:mb-0">
+                        <!-- Icono de Bomba de Agua (simulado) -->
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25M17.5 10.5h-11a.5.5 0 00-.5.5v5a.5.5 0 00.5.5h11a.5.5 0 00.5-.5v-5a.5.5 0 00-.5-.5zM12 10.5V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v4.5M15 10.5V6a2 2 0 012-2h2a2 2 0 012 2v4.5"></path></svg>
+                    </div>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg text-red-800">NUEVO HIDRONEUMÁTICO (Sala de Bombas)</p>
+                        <!-- Se eliminan los asteriscos/fecha de ejecución -->
+                        <p class="text-sm text-gray-600">Se pagó la primera cuota de la inversión para el nuevo equipo, vital para el suministro de agua. El trabajo se ejecutará la semana del 01 de diciembre.</p>
+                    </div>
+                    <!-- Estos son montos de facturas cerradas, se mantienen exactos -->
+                    <div class="ml-auto mt-2 sm:mt-0 font-extrabold text-lg text-red-700">+$525.583</div>
+                </div>
+
+                <!-- ITEM 2: REPARACIÓN DE RIEGO (FILTRACIÓN) -->
+                <div class="p-4 bg-red-50 border border-red-200 rounded-lg flex flex-col sm:flex-row items-start sm:items-center">
+                    <div class="flex-shrink-0 mr-4 mb-2 sm:mb-0">
+                        <!-- Icono de Gotera/Filtro (simulado) -->
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2 1m2-1V3m2 7h2m-4 0h-2M7 13h10a2 2 0 002-2V9a2 2 0 00-2-2H7a2 2 0 00-2 2v2a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg text-red-800">FILTRACIÓN EN MATRIZ DE RIEGO</p>
+                        <p class="text-sm text-gray-600">Reparación de filtración mayor en el sistema de riego, acceso a estacionamiento de visitas. Importante para evitar daños estructurales y sobreconsumo de agua.</p>
+                    </div>
+                    <!-- Estos son montos de facturas cerradas, se mantienen exactos -->
+                    <div class="ml-auto mt-2 sm:mt-0 font-extrabold text-lg text-red-700">+$292.398</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: COMPARACIÓN DE ÍTEMS CLAVE (GRÁFICO DE DONUT/PASTEL SIMULADO) -->
+        <section class="mb-10">
+            <h2 class="text-xl sm:text-2xl font-bold mb-4 text-secondary">Proporción del Gasto Total (Noviembre 2025)</h2>
+            <div class="p-5 bg-card rounded-xl shadow-lg grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <!-- Leyenda de colores y porcentajes -->
+                <div class="space-y-2 order-2 sm:order-1">
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 rounded-full bg-blue-500 mr-2"></div>
+                        <p class="text-sm font-semibold">Administración y Personal (43.0%)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 rounded-full bg-green-500 mr-2"></div>
+                        <p class="text-sm font-semibold">Uso o Consumo (29.3%)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 rounded-full bg-purple-500 mr-2"></div>
+                        <p class="text-sm font-semibold">Mantención (11.5%)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 rounded-full bg-red-500 mr-2"></div>
+                        <p class="text-sm font-semibold">Reparación (9.5%)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 rounded-full bg-yellow-500 mr-2"></div>
+                        <p class="text-sm font-semibold">Seguros y Otros (6.7%)</p>
+                    </div>
+                </div>
+
+                <!-- Gráfico de Pastel Simulado (Usando SVG) -->
+                <div class="w-full h-40 flex items-center justify-center order-1 sm:order-2">
+                    <svg viewBox="0 0 100 100" class="w-36 h-36">
+                        <!-- Porcentajes (43.0, 29.3, 11.5, 9.5, 6.7) -->
+                        <g transform="rotate(-90 50 50)">
+                            <!-- 1. Administración (43.0%) - Azul -->
+                            <circle r="45" cx="50" cy="50" fill="transparent" stroke="#3b82f6" stroke-width="10" stroke-dasharray="43 57" transform="rotate(0 50 50)"></circle>
+                            <!-- 2. Uso o Consumo (29.3%) - Verde -->
+                            <circle r="45" cx="50" cy="50" fill="transparent" stroke="#10b981" stroke-width="10" stroke-dasharray="29.3 70.7" transform="rotate(43 50 50)"></circle>
+                            <!-- 3. Mantención (11.5%) - Púrpura -->
+                            <circle r="45" cx="50" cy="50" fill="transparent" stroke="#a78bfa" stroke-width="10" stroke-dasharray="11.5 88.5" transform="rotate(72.3 50 50)"></circle>
+                            <!-- 4. Reparación (9.5%) - Rojo -->
+                            <circle r="45" cx="50" cy="50" fill="transparent" stroke="#ef4444" stroke-width="10" stroke-dasharray="9.5 90.5" transform="rotate(83.8 50 50)"></circle>
+                            <!-- 5. Seguros y Otros (6.7%) - Amarillo -->
+                            <circle r="45" cx="50" cy="50" fill="transparent" stroke="#facc15" stroke-width="10" stroke-dasharray="6.7 93.3" transform="rotate(93.3 50 50)"></circle>
+                        </g>
+                        <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" class="text-sm font-bold text-gray-800">Total</text>
+                        <text x="50" y="65" text-anchor="middle" dominant-baseline="middle" class="text-xs text-gray-500">Nov '25</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / LLAMADA A LA ACCIÓN -->
+        <footer class="text-center pt-4 border-t border-gray-300">
+            <p class="text-md font-semibold text-gray-700">Para un buen funcionamiento, les solicitamos mantener sus gastos comunes al día, a fin de cumplir con las obligaciones económicas que mantiene la comunidad.</p>
+            <p class="text-sm text-gray-500 mt-2">Administrador: Andres M. Gutierrez Fernandez | ¡Gracias por contribuir al cuidado de nuestra comunidad!</p>
+        </footer>
+    </div>
+</body>
+</html>
